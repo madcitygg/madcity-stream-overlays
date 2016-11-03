@@ -55,12 +55,37 @@ body {
 		bottom: 0;
 		right: 0;
 		width: 200px;
-		height: 150px;
 
 		&-team,
 		&-raised,
 		&-goal{
 			display: block;
+		}
+	}
+
+	.extralifeplayers {
+		background: $extralife;
+		padding: 40px;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 200px;
+		
+		.extralifeplayer {
+			&-avatar,
+			&-name,
+			&-raised,
+			&-goal{
+				display: block;
+			}
+
+			&-avatar{
+				> img{
+					display: block;
+					width: 25px;
+					height: 25px;
+				}
+			}
 		}
 	}
 }
