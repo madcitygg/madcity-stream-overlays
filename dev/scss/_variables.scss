@@ -1,0 +1,62 @@
+// Move all of these out into 'tokens' into their own repo/package. Consider theming for different MCGG properties.
+
+// Colors
+$primary: #2FE7BE;
+$secondary: #727DF0;
+$white: #ffffff;
+$black: #000000;
+
+$brown: #210002;
+$orange: #FFAF00;
+
+$twitch: #6441A5;
+$extralife: #23c1e8;
+
+// Fonts
+$font-primary: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+$font-secondary: "Archer SSm A", "Archer SSm B", Georgia, serif;
+
+@mixin gothamBook() {
+	font-family: $font-primary;
+	font-style: normal;
+	font-weight: 400;
+}
+@mixin gothamMedium() {
+	font-family: $font-primary;
+	font-style: normal;
+	font-weight: 500;
+}
+@mixin gothamBold() {
+	font-family: $font-primary;
+	font-style: normal;
+	font-weight: 700;
+}
+@mixin archerBook() {
+	font-family: $font-secondary;
+	font-style: normal;
+	font-weight: 500;
+}
+@mixin archerBold() {
+	font-family: $font-secondary;
+	font-style: normal;
+	font-weight: 800;
+}
+
+// Type Scale
+$type-base: 16px;
+$type-base-1: 13px;
+$type-base-2: 11px;
+$type-base-3: 9px;
+
+$capsLetterSpacing: 3px;
+
+// Breakpoints
+$large: 980px;
+
+// Spacing
+$major: 40px;
+$minor: 20px;
+$small: 10px;
+
+// Browser support flag
+$supportIE9: false;

@@ -1,0 +1,69 @@
+@import "vendor/reset";
+@import "vendor/font-awesome/font-awesome.scss";
+@import "variables";
+@import "mixins";
+@import "grid";
+@import "typography";
+
+html {
+	box-sizing: border-box;
+	font-size: $type-base;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	@include archerBook;
+	font-size: $type-base;
+	font-size: 1rem;
+	background: transparent;
+}
+
+.overlay {
+	position: relative;
+	width: 1280px;
+	height: 720px;
+	background: transparent;
+	border: 5px solid $brown;
+
+	&-social {
+		// @include angle(after, false, 1deg);
+		background: $brown;
+		color: $orange;
+		padding: 15px 30px;
+		@include smallcaps;
+		position: absolute;
+
+		&._tl {
+			top: 0;
+			left: 0;
+		}
+
+		&._tr {
+			top: 0;
+			right: 0;
+		}
+	}
+
+	.extralife {
+		background: $extralife;
+		padding: 40px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		width: 200px;
+		height: 150px;
+
+		&-team,
+		&-raised,
+		&-goal{
+			display: block;
+		}
+	}
+}
+
+// Components
+@import "components/Media";

@@ -1,0 +1,16 @@
+.Media {
+	@include flexboxRow(center, table-row);
+
+	&-media {
+		display: inline-block;
+		vertical-align: middle;
+		> .fa {
+			font-size: 20px;
+		}
+	}
+	&-label {
+		display: inline-block;
+		padding-left: 10px;
+		vertical-align: middle;
+	}
+}
