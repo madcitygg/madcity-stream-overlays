@@ -13,8 +13,10 @@ $twitch: #6441A5;
 $extralife: #23c1e8;
 
 // Fonts
-$font-primary: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
-$font-secondary: "Archer SSm A", "Archer SSm B", Georgia, serif;
+$font-primary: 'Open Sans', sans-serif;
+$font-secondary: 'Open Sans', sans-serif;
+// $font-primary: "Gotham SSm A", "Gotham SSm B", Helvetica, Arial, sans-serif;
+// $font-secondary: "Archer SSm A", "Archer SSm B", Georgia, serif;
 
 @mixin gothamBook() {
 	font-family: $font-primary;

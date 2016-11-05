@@ -49,28 +49,88 @@ body {
 	}
 
 	.extralife {
-		background: $extralife;
-		padding: 40px;
+		background: $brown;
+		padding: 15px;
 		position: absolute;
-		bottom: 0;
-		right: 0;
+		top: 200px;
+		right: 20px;
 		width: 200px;
+		color: $white;
+
+		&-brands{
+			margin: 0 0 10px 0;
+		}
 
 		&-team,
+		&-and,
+		&-extralife{
+			display: inline-block;
+		}
+
+		&-team {
+			width: 24px;
+			height: 40px;
+			text-indent: -9999px;
+			overflow: hidden;
+			background-size: 24px 40px;
+			background-image: url(../images/madcity-white.png);
+			background-repeat: no-reepat;
+			margin: 0 8px 0 0;
+		}
+		&-and{
+			transform: translateY(-11px);
+			margin: 0 5px 0 0;
+		}
+		&-extralife {
+			width: 48px;
+			height: 40px;
+			text-indent: -9999px;
+			overflow: hidden;
+			background-size: 48px 40px;
+			background-image: url(../images/extralife-white-1000x840.png);
+			background-repeat: no-reepat;
+			transform: translateY(-4px);
+		}
+
 		&-raised,
+		&-bar,
 		&-goal{
 			display: block;
+			margin: 0 0 10px 0;
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+
+		&-raised,
+		&-goal{
+			@include smallcaps();
+		}
+
+		&-bar{
+			background: $white;
+			height: 10px;
+			position: relative;
+			&-inner{
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				background: $extralife;
+				height: 10px;
+			}
 		}
 	}
 
 	.extralifeplayers {
-		background: $extralife;
-		padding: 40px;
+		background: $brown;
+		color: $white;
+		padding: 10px;
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 200px;
-		
+
 		.extralifeplayer {
 			&-avatar,
 			&-name,

@@ -1,16 +1,22 @@
 .Media {
 	@include flexboxRow(center, table-row);
+	float: left;
+	margin: 0 20px 0 0;
+	&:last-child{
+		margin-right: 0;
+	}
 
 	&-media {
 		display: inline-block;
 		vertical-align: middle;
 		> .fa {
-			font-size: 20px;
+			font-size: 18px;
 		}
 	}
 	&-label {
 		display: inline-block;
 		padding-left: 10px;
 		vertical-align: middle;
+		transform: translateY(-2px);
 	}
 }

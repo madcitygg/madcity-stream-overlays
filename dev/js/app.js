@@ -3,10 +3,10 @@ var mcgg = {};
 var refreshInterval = 150000;
 
 mcgg.init = function() {
-	mcgg.extaLifePlayers();
-	
+	// mcgg.extaLifePlayers();
+
 	mcgg.extraLifeTeamWidget(29888);
-	setInterval(mcgg.extraLifeTeamWidget, refreshInterval);
+	setInterval(mcgg.extraLifeTeamWidget(29888), refreshInterval);
 };
 
 mcgg.extraLifeTeamWidget = function(teamID) {
@@ -15,10 +15,12 @@ mcgg.extraLifeTeamWidget = function(teamID) {
 	}).done(function(data) {
 		console.log(data);
 		var container = $(".js-extralife"),
-				team = "<span class='extralife-team'>Team: " + data.name + "</span>",
+				percentage = data.totalRaisedAmount / data.fundraisingGoal * 100;
+				team = "<div class='extralife-brands'><span class='extralife-team'>Team: " + data.name + "</span><span class='extralife-and'>+</span><span class='extralife-extralife'></span></div>";
 				raised = "<span class='extralife-raised'>Raised: $" + data.totalRaisedAmount + "</span>",
+				bar = "<span class='extralife-bar'><span class='extralife-bar-inner' style='width:" + percentage + "%;'></span></span>";
 				goal = "<span class='extralife-goal'>Our Goal: $" + data.fundraisingGoal + "</span>",
-				template = team + raised + goal;
+				template = team + raised + bar + goal;
 
 		container.html("");
 		container.append(template);

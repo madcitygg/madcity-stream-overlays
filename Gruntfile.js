@@ -98,5 +98,5 @@ module.exports = function(grunt) {
   // Tasks
   grunt.registerTask('default', ['concat', 'uglify', 'sass', 'postcss', 'copy']);
   grunt.registerTask('w', ['watch']);
-  grunt.registerTask('production', ['default', 'compress-images']);
+  grunt.registerTask('production', ['default', 'imagemin']);
 };
